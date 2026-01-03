@@ -2,10 +2,10 @@ from scraper import scrape_linkedin_page
 from store import pages_collection
 
 def get_page(page_id: str):
-    # Try fetching page from MongoDB
+
     page = pages_collection.find_one({"page_id": page_id})
     if page:
-        page.pop("_id", None)  # Remove MongoDB _id before returning
+        page.pop("_id", None) 
         return page
 
     # If not in DB, scrape LinkedIn
