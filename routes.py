@@ -1,5 +1,5 @@
 from fastapi import APIRouter
-from services import get_page  #services.py exists
+from services import get_page  
 
 router = APIRouter() 
 
