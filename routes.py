@@ -1,7 +1,7 @@
 from fastapi import APIRouter
-from services import get_page  # make sure services.py exists
+from services import get_page  #services.py exists
 
-router = APIRouter()  # This is important: must be named 'router'
+router = APIRouter() 
 
 @router.get("/page/{page_id}")
 def fetch_page(page_id: str):
