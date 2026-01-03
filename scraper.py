@@ -19,7 +19,7 @@ def scrape_linkedin_page(page_id: str):
     response = requests.get(url, params=params)
     data = response.json()
 
-    # --- Try Knowledge Graph ---
+    # Knowledge Graph
     kg = data.get("knowledge_graph", {})
 
     name = kg.get("title")
@@ -28,7 +28,7 @@ def scrape_linkedin_page(page_id: str):
     industry = kg.get("type")
     logo = kg.get("image")
 
-    # --- Fallback: Organic Results ---
+    #Fallback Organic Results
     if not name:
         organic = data.get("organic_results", [])
         if organic:
