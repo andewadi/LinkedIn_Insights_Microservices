@@ -1,11 +1,10 @@
 from pymongo import MongoClient
 
-# Connect to MongoDB
-client = MongoClient("mongodb://localhost:27017")  # Use your URI if different
+client = MongoClient("mongodb://localhost:27017") 
 
-# Use your admin database
+#admin database
 db = client.admin
 
-# Use the Linked_Insights collection
+#Linked_Insights collection
 pages_collection = db.Linked_Insights
 
