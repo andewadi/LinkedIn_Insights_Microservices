@@ -8,7 +8,6 @@ def get_page(page_id: str):
         page.pop("_id", None) 
         return page
 
-    # If not in DB, scrape LinkedIn
     data = scrape_linkedin_page(page_id)
     pages_collection.insert_one(data)
     return data
